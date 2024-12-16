@@ -1,0 +1,19 @@
+[package]
+name = "socks-uot"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+strip = true 
+lto = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+env_logger = "0.9"
+log = "0.4"
+tokio = { version = "1", features = ["net", "io-util", "macros", "rt-multi-thread", "sync"] }
+clap = { version = "3", features = ["derive"] }
+lazy_static = "1"
+rand = "0.8"
+socks5-proto = "0.3"
